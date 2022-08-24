@@ -1,0 +1,22 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Algorithms and CS from The Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "algorithms",
+    "javascript",
+    "top",
+    "the",
+    "odin",
+    "project"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "28.1.3"
+  }
+}
