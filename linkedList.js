@@ -43,6 +43,7 @@ class LinkedList {
   }
 
   at(nodeIndex) {
+    if (this.first === null) return null
     let index = 0
     let pointer = this.first
     while (pointer.value !== null) {
@@ -55,6 +56,7 @@ class LinkedList {
   }
 
   pop() {
+    if (this.first === null) return null
     let currPointer = this.first
     let nextPointer = currPointer.nextNode
     while (nextPointer.nextNode !== null) {
@@ -65,6 +67,40 @@ class LinkedList {
     currPointer.nextNode = null
     this.length--
     return returnNode.value
+  }
+
+  contains(value) {
+    let pointer = this.first ?? null
+    while (pointer !== null && pointer.nextNode !== null) {
+      // Go through the list till the last value
+      if (pointer.value === value) return true
+      pointer = pointer.nextNode
+    }
+    return false
+  }
+
+  find(value) {
+    let pointer = this.first ?? null // If there's first node, then assign, else, assign null
+    let index = 0
+    while (pointer !== null && pointer.nextNode !== null) {
+      // Go through the list till the last value
+      if (pointer.value === value) return index
+      index++
+      pointer = pointer.nextNode
+    }
+    return null
+  }
+
+  toString() {
+    let pointer = this.first ?? null
+    let str = ''
+    while (pointer !== null && pointer.value !== null) {
+      // Go through the list till the last value
+      str += `( ${pointer.value} ) -> `
+      pointer = pointer.nextNode
+    }
+    str += 'null'
+    return str
   }
 }
 
@@ -87,3 +123,14 @@ class Node {
 // console.log(linkedL.size())
 // console.log(linkedL.pop())
 // console.log(linkedL.tail())
+// console.log(linkedL.contains(15))
+// console.log(linkedL.contains(123))
+// console.log(linkedL.contains(120))
+// console.log(linkedL.find(120))
+// console.log(linkedL.find(123))
+// console.log(linkedL.find(13))
+// console.log(linkedL.toString())
+
+// TO DO:
+// insertAt(value, index) that inserts a new node with the provided value at the given index.
+// removeAt(index) that removes the node at the given index.
