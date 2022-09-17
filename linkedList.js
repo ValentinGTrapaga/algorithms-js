@@ -119,6 +119,7 @@ class Node {
 // linkedL.append(123)
 // linkedL.append(126)
 // linkedL.append(120)
+// console.log(linkedL.toString())
 // console.log(linkedL.tail())
 // console.log(linkedL.size())
 // console.log(linkedL.pop())

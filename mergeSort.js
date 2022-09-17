@@ -28,4 +28,4 @@ function mergeSort(arr) {
   return merge(mergeSort(left), mergeSort(arr))
 }
 
-console.log(mergeSort([-21, 2, 400, 236, 81, 9, -3]))
+module.exports = mergeSort
